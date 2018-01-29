@@ -14,7 +14,7 @@ let inventory = [
        itemreview: ""
     },
     {
-        id: "000-000000-000",
+        id: "000-000000-002",
         name: "Canon 5D Mark III DSLR Camera Body",
         category: "DSLR",
         description: "The Canon EF 50mm f/1.2L USM Lens boasts very high quality with a very fast maximum aperture that is perfect for low depth-of-field portraiture and still life work. It features a Super Spectra coating to suppress flare and ghosting and is also weather-sealed for safe outdoor shooting. It can be paired with both full frame sensor cameras, such as the Canon 5D Mark III, and with crop frame sensor cameras, such as the Canon 7D Mark II. The focal length equivalent on crop frame sensors is 80mm. This lens is considered among many Canon shooters as a definitive portrait lens, along with the Canon EF 85mm f/1.2L USM Lens.",
@@ -26,11 +26,11 @@ let inventory = [
         condition: 9,
         included: "camera strap, body cap, battery, charger",
         notes: "This lens is compatible with Canon EF mount cameras in both full frame and crop frame sensors. The focal length equivalent on crop frame sensors is 80mm. This lens is not compatible with 2X and 1.4X Canon extenders.",
-        itemReview:
+        itemReview: ""
     }
 ];
 
-function createInventoryItem(){
+function CreateInventoryItem(){
     var newItem = {id, name, category, description, specs, manualURL, productReview, priceDay, priceWeek, condition, included, notes, itemReview};
     newItem.id = "";
     newItem.name = "";
@@ -48,4 +48,4 @@ function createInventoryItem(){
     return newItem;
 }
 
-var itemX = createInventoryItem("000-0000000-000", "Canon 5d Mark IV", ..... );
+var itemX = CreateInventoryItem("000-0000000-000", "Canon 5d Mark IV", ..... );
