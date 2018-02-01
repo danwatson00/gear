@@ -31,17 +31,19 @@
         an vel, ubique sanctus dolores qui ne. Nec et dico conclusionemque, no clita fabulas epicuri vel. In iudico epicuri adipiscing
         sit, ullum scribentur id sea. Vidit veniam noluisse nec ex.</p>
 
-        <form name="listItemForm">
-            Rental Item Category: <select name="category">
+        <div>
+            Rental Item Name: <input type="text" name="itemName" id="itemName">
+            <br>
+            Rental Item Category: <select name="itemCategory" id="itemCategory">
                 <option value="photo-video">Photo/Video</option>
                 <option value="lighting">Lighting</option>
                 <option value="accessories">Accessories</option>
                 <option value="other-category">Other</option>
             </select>
             <br> 
-            Subcategory:<input type="text" name="subcategory">
+            Subcategory:<input type="text" name="itemSubcategory" id="itemSubcategory">
             <br>
-            Condition:<select name="condition">
+            Condition:<select name="itemCondition" id="itemCondition">
                 <option>10</option>
                 <option>9</option>
                 <option>8</option>
@@ -54,24 +56,30 @@
                 <option>1</option>
             </select>
             <br>
-            Price Per Day:<input type="text" name="priceDay" id="priceDay" >
+            Price Per Day:<input type="text" name="itemPriceDay" id="itemPriceDay" >
             <br>
-            Price Per Week:<input type="text" name="priceWeek" id="priceWeek">
+            Price Per Week:<input type="text" name="itemPriceWeek" id="itemPriceWeek">
             <br>
-            Manual URL: <input type="text" name="manualURL" id="manualURL">
+            Manual URL: <input type="text" name="itemManualURL" id="itemManualURL">
             <br>
-            Description:<input type="text area" name="description" id="description">
+            Image URL: <input type="text" name="itemImageURL" id="itemImageURL">
             <br>
-            Specifications:<input type="text area" name="specs" id="specs">
+            Description:<input type="text area" name="itemDescription" id="itemDescription">
             <br>
-            Product Review:<input type="text area" name="productReview" id="productReview">
+            Specifications:<input type="text area" name="itemSpecs" id="itemSpecs">
             <br>
-            Notes:<input type="text area" name="notes" id="notes">
+            Product Review:<input type="text area" name="itemProductReview" id="itemProductReview">
             <br>
-            <button type="submit" id=formSubmitBtn>Create Rental Item</button>
+            Notes:<input type="text area" name="itemNotes" id="itemNotes">
+            <br>
+            <button id="formSubmitBtn">Create Rental Item</button>
            
-        </form>
+        </div>
 
+        <h2>My Gear for Rent</h2>
+        <div id="myGearDiv">
+
+        </div>
 
     </main>
 
