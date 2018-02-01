@@ -35,54 +35,65 @@
     }
 ];
 **/
-function newItem(id, name, category, subcategory, description, specs, manualURL, productReview, priceDay, priceWeek, condition, included, notes, itemReview){
-    this.id = id;
-    this.name = name;
-    this.category = category;
-    this.subcategory = subcategory;
-    this.description = description;
-    this.specs = specs;
-    this.manualURL = manualURL;
-    this.productReview = productReview;
-    this.priceDay = priceDay;
-    this.priceWeek = priceWeek;
-    this.condition = condition;
-    this.included = included;
-    this.notes = notes;
-    this.productReview = productReview;
-    this.userReviews = userReviews;
+function newItem(itemId, itemName, itemCategory, itemSubcategory, itemDescription, itemSpecs, itemManualURL, itemProductReview, itemPriceDay, itemPriceWeek, itemCondition, itemIncluded, itemNotes, itemUserReviews){
+    this.itemId = itemId;
+    this.itemName = itemName;
+    this.itemCategory = itemCategory;
+    this.itemSubcategory = itemSubcategory;
+    this.itemDescription = itemDescription;
+    this.itemSpecs = itemSpecs;
+    this.itemManualURL = itemManualURL;
+    this.itemProductReview = itemProductReview;
+    this.itemPriceDay = itemPriceDay;
+    this.itemPriceWeek = itemPriceWeek;
+    this.itemCondition = itemCondition;
+    this.itemIncluded = itemIncluded;
+    this.itemNotes = itemNotes;
+    this.itemProductReview = itemProductReview;
+    this.itemUserReviews = itemUserReviews;
+    this.itemImage = itemImage;
     return newItem;
 } 
 
-var formSubmitBtn = document.getElementById("formSubmitBtn");
+console.log(newItem);
 
-formSubmitBtn.addEventListener('submit', () => {
-        var category = document.getElementById("category");
-        var subcategory = document.getElementById("subcategory");
-        var description = document.getElementById("description");
-        var condition = document.getElementById("condition");
-        var priceDay = document.getElementById("priceDay");
-        var priceWeek = document.getElementById("priceWeek");
-        var manualURL = document.getElementById("manualURL");
-        var specs = document.getElementById("specs");
-        var productReview = document.getElementById("productReview");
-        var notes = document.getElementById("notes");
+var myGear = [];
+myGearDiv = document.getElementById("myGearDiv");
+
+var formSubmitBtn = document.getElementById("formSubmitBtn");
+console.log(formSubmitBtn);
+formSubmitBtn.addEventListener('click', () => {
+    let gearItem = {};
+        gearItem.itemName = document.getElementById("itemName").value;
+        gearItem.itemImageURL = document.getElementById("itemImageURL").value;
+        gearItem.itemCategory = document.getElementById("itemCategory").value;
+        gearItem.itemSubcategory = document.getElementById("itemSubcategory").value;
+        gearItem.itemDescription = document.getElementById("itemDescription").value;
+        gearItem.itemCondition = document.getElementById("itemCondition").value;
+        gearItem.itemPriceDay = document.getElementById("itemPriceDay").value;
+        gearItem.itemPriceWeek = document.getElementById("itemPriceWeek").value;
+        gearItem.itemManualURL = document.getElementById("itemManualURL").value;
+        gearItem.itemSpecs = document.getElementById("itemSpecs").value;
+        gearItem.itemProductReview = document.getElementById("itemProductReview").value;
+        gearItem.itemNotes = document.getElementById("itemNotes").value;
+        myGear.push(gearItem);
+        console.log(myGear);
+        
+        for (var i = 0; i <= myGear.length; i++) {
+            let gearItemElement = `<div class="gearCard"><img class="itemImage" src"${gearItem.itemImageURL}"<br>
+            <h3>${gearItem.itemName}</h3><p>${gearItem.itemCategory}</p><br><small>${gearItem.itemSubcategory}</small><br>
+            <ul class="cardList"><li>$${gearItem.itemPriceDay}/day</li><li>$${gearItem.itemPriceWeek}/week</li>
+            <li>${gearItem.itemCondition}</li><li>${gearItem.itemId}</li></ul><p>More info</p></div>`;
+            myGearDiv.innerHTML += gearItemElement;
+}
     }
+    
 );
 
 
+
+
 /**
----- or ----- 
-let newItem.priceDay = document.getElementById("priceDay");
-let newItem.priceWeek = document.getElementById("priceWeek");
-let newItem.manualURL = document.getElementById("manualURL");
-let newItem.description = document.getElementById("description");
-let newItem.specs = document.getElementById("specs");
-let newItem.productReview = document.getElementById("productReview");
-let newItem.notes = document.getElementById("notes"); **/
-
-/** var itemX = CreateInventoryItem("000-0000000-000", "Canon 5d Mark IV", ..... );
-
 const newItem = document.getElementById('formSubmitBtn');
 formSubmitBtn.addEventListener('click', () => {
     form
